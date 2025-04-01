@@ -19,7 +19,7 @@ A program that simulates a random bingo game between n players in a UNIX shell, 
   <ul dir="auto">
     <li>This is just an example project born as an exercise.</li>
     <li>The program takes <b><i>n players</i></b> and <b><i>m cards</i></b> from input shell and simulates a bingo game with random numbers extraction.</li>
-    <li>More info <a href="https://github.com/TheWalkingFroggy/zonerandomizer/blob/main/zonemode.effectsettings"><i>here</i></a></li>
+    <li>More info <a href="https://github.com/TheWalkingFroggy/bingogame/blob/main/Exercise.txt"><i>here</i></a></li>
   </ul>
 </div>
 
