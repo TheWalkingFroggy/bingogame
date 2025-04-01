@@ -1,0 +1,19 @@
+Create a program in C that takes in input:
+
+bingogame <n> <m>
+
+The program will simulate a Bingo game between n players, for each given m cards.
+There will be a Dealer that extracts numbers in a range between 1 and 75.
+Cards are composed by 3 rows and 5 columuns, so 15 numbers in total all distinct in a single card.
+There are only two prizes: five (a row of five winning numbers) and bingo (a completed card).
+
+The program, once started, will create 1+n threads: a single thread Dealer named D and n Player threads (P1, P2, ..., Pn).
+All thread must coordinate with semaphores and, if needed, mutexes.
+There will be a single shared structure that contains the semaphores and mutexes, and some other variables that can't be initialized first with values depending from n and m.
+
+In the first phase of the program, the Dealer will casually generate n*m cards; these will be assigned to the players using the shared structure.
+After ALL cards are given to players, phase two will start with the extraction of random numbers. No duplicate numbers can be extracted.
+For each extraction, the number will be notified to all players using the shared structure and coordination objects.
+If a player wins a prize, he will notify the dealer.
+There can be only one winner of five, and, after a player wins the bingo, the game (and the program) will end.
+All threads and thread main must terminate their execution correctly.
